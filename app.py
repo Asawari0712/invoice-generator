@@ -23,7 +23,7 @@ if "items" not in st.session_state:
         {"name": "Pen", "qty": 10, "price": 5.0}
     ]
 
-for i, item in enumerate(st.session_state.items):
+for i, item in enumerate(st.session_state["items"]):
     st.subheader(f"Product {i + 1}")
     c1, c2, c3 = st.columns([3, 1, 2])
     item["name"] = c1.text_input("Product", item["name"], key=f"n{i}")
